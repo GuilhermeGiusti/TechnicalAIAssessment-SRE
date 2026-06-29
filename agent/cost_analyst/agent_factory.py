@@ -12,7 +12,6 @@ import logging
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 from agno.tools.csv_toolkit import CsvTools
-from agno.tools.pandas import PandasTools
 
 from .config import AppConfig, resolve_capabilities
 from .models import CostReport
@@ -25,10 +24,17 @@ logger = logging.getLogger(__name__)
 def build_tools(config: AppConfig, capabilities: Capabilities) -> list:
     """Build the read-only tool list for the active capabilities.
 
-    Always: CsvTools + PandasTools. Conditionally: AwsCostTools / KubernetesReadTools
-    / PrometheusTools. A disabled capability contributes no tools at all.
+    Always: CsvTools (read + DuckDB SQL query over the CSV). Conditionally:
+    AwsCostTools / KubernetesReadTools / PrometheusTools. A disabled capability
+    contributes no tools at all.
+
+    PandasTools is intentionally NOT registered: its `create_pandas_dataframe` /
+    `run_dataframe_operation` functions expose a `Dict[str, Any]` parameter, which
+    agno renders with JSON-Schema `propertyNames` — a construct the OpenAI
+    function-calling API rejects (`invalid_function_parameters`). CsvTools'
+    `query_csv_file` (DuckDB SQL) covers aggregation/analysis read-only.
     """
-    tools: list = [CsvTools(csvs=[config.csv_path]), PandasTools()]
+    tools: list = [CsvTools(csvs=[config.csv_path])]
 
     if capabilities.aws_live:
         tools.append(AwsCostTools())
@@ -66,6 +72,14 @@ def build_agent(
         instructions=instructions,
         markdown=True,
         output_schema=CostReport,
+        # JSON mode (not OpenAI strict structured outputs). The CostReport schema
+        # uses constructs OpenAI's strict `response_format` validator rejects —
+        # enum fields with a default render as a `$ref` carrying a sibling
+        # `default` ("$ref cannot have keywords {'default'}"), plus `min_length` /
+        # `ge` constraints. In JSON mode agno injects the schema into the prompt
+        # and parses the reply via `CostReport.model_validate_json`, so every
+        # Pydantic validator (evidence-required, needs_data) still runs.
+        use_json_mode=True,
         debug_mode=config.debug,
     )
     return agent, capabilities

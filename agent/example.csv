@@ -1,0 +1,62 @@
+service,usage_type,resource_id,region,period,cost_usd
+Elastic Compute Cloud,$0.045 per NAT Gateway Hour,,us-east-1,2026-06,30.15
+Elastic Compute Cloud,$0.0168 per On Demand Linux t4g.small Instance Hour,,us-east-1,2026-06,7.99
+Elastic Compute Cloud,$0.0336 per On Demand Linux t4g.medium Instance Hour,,us-east-1,2026-06,106.66
+Elastic Compute Cloud,$0.0416 per On Demand Linux t3.medium Instance Hour,,us-east-1,2026-06,27.76
+Elastic Compute Cloud,$0.0725 per On Demand Linux c7g.large Instance Hour,,us-east-1,2026-06,4.98
+Elastic Compute Cloud,$0.0832 per On Demand Linux t3.large Instance Hour,,us-east-1,2026-06,55.36
+Elastic Compute Cloud,$0.1344 per On Demand Linux t4g.xlarge Instance Hour,,us-east-1,2026-06,66.38
+Elastic Compute Cloud,$0.145 per On Demand Linux c7g.xlarge Instance Hour,,us-east-1,2026-06,58.28
+Elastic Compute Cloud,$0.153 per On Demand Linux c6a.xlarge Instance Hour,,us-east-1,2026-06,13.40
+Elastic Compute Cloud,$0.192 per On Demand Linux m5.large Instance Hour,,us-east-1,2026-06,29.83
+Elastic Compute Cloud,$0.9776 per On Demand Linux g6.2xlarge Instance Hour,,us-east-1,2026-06,344.22
+Elastic Compute Cloud,c6a.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #1,,us-east-1,2026-06,3.12
+Elastic Compute Cloud,c6a.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #12,,us-east-1,2026-06,2.06
+Elastic Compute Cloud,c6a.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #6,,us-east-1,2026-06,1.71
+Elastic Compute Cloud,c6a.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #62,,us-east-1,2026-06,9.67
+Elastic Compute Cloud,c6a.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #7,,us-east-1,2026-06,9.54
+Elastic Compute Cloud,m5.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #1,,us-east-1,2026-06,0.06
+Elastic Compute Cloud,m5.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #12,,us-east-1,2026-06,0.40
+Elastic Compute Cloud,t4g.medium Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #1,,us-east-1,2026-06,0.59
+Elastic Compute Cloud,t4g.medium Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #12,,us-east-1,2026-06,0.09
+Elastic Compute Cloud,t4g.medium Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #6,,us-east-1,2026-06,0.38
+Elastic Compute Cloud,t4g.medium Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #62,,us-east-1,2026-06,1.08
+Elastic Compute Cloud,t4g.medium Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #7,,us-east-1,2026-06,1.21
+Elastic Compute Cloud,t4g.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #1,,us-east-1,2026-06,4.69
+Elastic Compute Cloud,t4g.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #12,,us-east-1,2026-06,1.61
+Elastic Compute Cloud,t4g.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #6,,us-east-1,2026-06,2.59
+Elastic Compute Cloud,t4g.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #62,,us-east-1,2026-06,17.97
+Elastic Compute Cloud,t4g.xlarge Linux/UNIX Spot Instance-hour in US East (N. Virginia) in VPC Zone #7,,us-east-1,2026-06,2.68
+Elastic Compute Cloud,$0.08 per GB-month of General Purpose (gp3) provisioned storage - US East (N. Virginia),,us-east-1,2026-06,78.93
+Data Transfer,$0.010 per GB - regional data transfer - in/out/between EC2 AZs or using elastic IPs or ELB,,us-east-1,2026-06,197.27
+Data Transfer,$0.090 per GB - first 10 TB / month data transfer out beyond the global free tier,,us-east-1,2026-06,171.35
+Simple Storage Service,"$0.005 per 1,000 PUT, COPY, POST, or LIST requests",,us-east-1,2026-06,5.15
+Simple Storage Service,"$0.004 per 10,000 GET and all other requests",,us-east-1,2026-06,0.27
+Simple Storage Service,$0.023 per GB - first 50 TB / month of storage used,,us-east-1,2026-06,309.33
+Elastic Container Service for Kubernetes,Amazon EKS cluster usage in US East (N. Virginia),,us-east-1,2026-06,200.70
+Elastic Container Service for Kubernetes,$0.02 per vCPU-Hour for Amazon EKS Hybrid Nodes usage in US East (N. Virginia),,us-east-1,2026-06,4.70
+Relational Database Service,$0.065 per RDS db.t4g.medium instance hour (or partial hour) running PostgreSQL,,us-east-1,2026-06,43.42
+Relational Database Service,$0.036 per db.t3.small Single-AZ instance hour (or partial hour) running PostgreSQL,,us-east-1,2026-06,0.01
+Relational Database Service,$0.072 per db.t3.medium Single-AZ instance hour (or partial hour) running PostgreSQL,,us-east-1,2026-06,71.25
+Relational Database Service,$0.115 per GB-month of provisioned GP3 storage running PostgreSQL,,us-east-1,2026-06,82.76
+Virtual Private Cloud,$0.05 per VPN Connection-Hour,,us-east-1,2026-06,33.45
+Virtual Private Cloud,$0.005 per Idle public IPv4 address per hour,,us-east-1,2026-06,2.15
+Virtual Private Cloud,$0.005 per In-use public IPv4 address per hour,,us-east-1,2026-06,107.69
+CloudWatch,"$0.30 per metric-month for first 10,000 metrics - US East (Northern Virginia)",,us-east-1,2026-06,9.32
+CloudWatch,$0.50 per GB custom log data class - US East (Northern Virginia),,us-east-1,2026-06,0.38
+CloudWatch,$0.50 per GB of vended logs ingested in Standard Log Class for the first 10TB - US East (Northern Virginia),,us-east-1,2026-06,117.32
+Elastic Load Balancing,$0.0225 per Application LoadBalancer-hour (or partial hour),,us-east-1,2026-06,34.90
+Elastic Load Balancing,$0.0225 per Network LoadBalancer-hour (or partial hour),,us-east-1,2026-06,23.49
+EC2 Container Registry (ECR),$0.10 per GB-month of data storage,,us-east-1,2026-06,56.68
+Key Management Service,$1 per customer managed KMS key version in US East (N. Virginia),,us-east-1,2026-06,2.77
+Key Management Service,$0.03 per 10000 KMS requests in US East (N. Virginia),,us-east-1,2026-06,38.78
+Elastic Container Service,AWS Fargate - Memory - US East (N.Virginia),,us-east-1,2026-06,2.97
+Elastic Container Service,AWS Fargate - vCPU - US East (N.Virginia),,us-east-1,2026-06,13.54
+Simple Queue Service,$0.50 per million Amazon SQS FIFO requests in Tier1 in US East (N Virginia),,us-east-1,2026-06,2.39
+Simple Queue Service,$0.40 per million Amazon SQS standard requests in Tier1 in US East (N Virginia),,us-east-1,2026-06,2.21
+Route 53,"$0.40 per 1,000,000 queries for the first 1 Billion queries",,global,2026-06,0.03
+Route 53,$0.50 per Hosted Zone for the first 25 Hosted Zones,,global,2026-06,4.00
+CloudWatch Events,$0.10 per GB for ArchivedEvents-Bytes:ArchiveEvents in US East (N. Virginia),,us-east-1,2026-06,0.02
+CloudWatch Events,$1.00 per million EventBridge custom events received in US East (N. Virginia),,us-east-1,2026-06,0.02
+Route 53,"$0.40 per 1,000,000 queries for the first 1 Billion queries (AWS Brasil)",,global,2026-06,0.06
+Route 53,$0.50 per Hosted Zone for the first 25 Hosted Zones (AWS Brasil),,global,2026-06,2.00

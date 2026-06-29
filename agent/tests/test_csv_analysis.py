@@ -9,11 +9,11 @@ from cost_analyst.models import Category, CostReport, Level, Recommendation, Sou
 from cost_analyst.persona import Capabilities
 
 
-def test_csv_only_registers_exactly_csv_and_pandas(example_csv):
+def test_csv_only_registers_exactly_csv(example_csv):
     config = AppConfig(csv_path=example_csv)
     caps = Capabilities(csv=True)  # nothing else active
     names = {type(t).__name__ for t in build_tools(config, caps)}
-    assert names == {"CsvTools", "PandasTools"}
+    assert names == {"CsvTools"}
 
 
 def test_recommendation_requires_evidence():

@@ -52,4 +52,4 @@ def test_shell_and_python_toolkits_are_never_registered(example_csv):
 def test_csv_only_surface_is_minimal(example_csv):
     caps = Capabilities(csv=True)
     names = {type(t).__name__ for t in build_tools(AppConfig(csv_path=example_csv), caps)}
-    assert names == {"CsvTools", "PandasTools"}
+    assert names == {"CsvTools"}

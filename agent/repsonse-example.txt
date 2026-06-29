@@ -1,0 +1,27 @@
+# AWS Cost Analysis Report
+
+**Analysis period:** 2026-06
+**Data sources used:** csv, aws_live
+**Total estimated monthly savings (estimate):** $18.08
+
+## Summary
+
+The top cost drivers for June 2026 are Elastic Compute Cloud (EC2) with significant costs on On Demand Instances, followed by Data Transfer and Simple Storage Service (S3) usage. Unused EBS volumes and detached resources add to unnecessary costs.
+
+## Recommendations (highest priority first)
+
+| # | Recommendation | Category | Est. monthly savings | Effort | Risk | Source | Evidence |
+|---|---|---|---|---|---|---|---|
+| 1 | Terminate unused EBS volumes | unused_or_obsolete | ~$18.08 | medium | low | aws_live | Unattached EBS volume IDs: vol-0eaee508b89c8b314, vol-0dcd6fd17e046e9d6, vol-0465e7bf3da4f1f0c, vol-088781c0861544eb2, vol-0b78d816b9f55290d. Total size 226 GiB priced at $0.08 per GB-month, as seen in CSV. |
+|  | _Terminating unused EBS volumes that are in 'available' state can reduce the storage costs incurred._ |  |  |  |  |  |  |
+| 2 | Review EC2 instance utilization for rightsizing | rightsizing | NEEDS DATA | high | medium | aws_live | Running EC2 instances: i-0e34e33797d7f0f2b, i-08c358f333cbde465, i-085ec9780d1d4f845. Costs in CSV indicate varied utilization levels. |
+|  | _Assessing the utilization of running instances such as t4g.medium could identify opportunities to downsize instances or switch to Reserved Instances._ |  |  |  |  |  |  |
+| 3 | Optimize S3 storage by utilizing lifecycle policies | storage_optimization | NEEDS DATA | medium | low | aws_live | S3 storage cost is significant at $309.33 for 2026-06. Buckets include candidate storages like front-app.s4s.tecmise.com and others. |
+|  | _Shifting infrequently accessed objects in S3 buckets to Infrequent Access or Glacier can reduce storage costs._ |  |  |  |  |  |  |
+
+## Assumptions & data gaps
+
+- Additional cost savings can be derived from rightsizing and storage optimization if detailed utilization data were available.
+- The savings from storage optimizations are not calculated due to lack of access frequency data.
+
+> All savings figures are estimates derived from the supplied data and standard pricing heuristics. This agent is read-only and makes no changes to any system.

@@ -1,7 +1,7 @@
 .idea
 
 # Secrets — never commit
-.env
+agent/.env
 *.env
 !*.env.example
 
@@ -17,3 +17,5 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+agent/.env
